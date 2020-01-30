@@ -5,6 +5,7 @@ type Config struct {
 	Ucloud   string `json:"ucloud"`
 	Mysql    string `json:"mysql"`
 	DB       string `json:"db"`
+	Download string `json:"download"`
 }
 
 func NewConfig() *Config {

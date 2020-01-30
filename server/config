@@ -1,3 +1,4 @@
 {
-	"location": "/data/downloads"
+	"location": "/data/downloads",
+	"download": "http://45.249.245.98:88"
 }

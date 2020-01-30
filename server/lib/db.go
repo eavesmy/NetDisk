@@ -7,15 +7,23 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"strconv"
+	"strings"
 )
 
+var downloadPath string
 var db = []model.Assets{}
+var root_path string
 
 func DbInit(c *model.Config) {
 
 	locationInit(c.DB, c.Location)
+	root_path = c.Location
+	downloadPath = c.Download
 
 	writeDb(c.DB)
+
+	fmt.Println("Init finished")
 }
 
 func locationInit(db_path, path string) {
@@ -39,11 +47,10 @@ func locationInit(db_path, path string) {
 
 func rangeDir(dir []os.FileInfo, path string) {
 	for _, fi := range dir {
+		initFile(fi, path)
 		if fi.IsDir() {
 			d, _ := ioutil.ReadDir(path + "/" + fi.Name())
 			rangeDir(d, path+"/"+fi.Name())
-		} else {
-			initFile(fi, path)
 		}
 	}
 }
@@ -54,6 +61,7 @@ func initFile(f os.FileInfo, path string) {
 		FileName:   f.Name(),
 		LastModify: f.ModTime(),
 		Size:       f.Size(),
+		IsDir:      f.IsDir(),
 		Path:       path,
 	}
 
@@ -96,4 +104,41 @@ func Md5(b []byte) []byte {
 	h := md5.New()
 	h.Write(b)
 	return h.Sum(nil)
+}
+
+func GetByCondition(s_type, s_p string) []model.Assets {
+
+	arr := []model.Assets{}
+
+	for _, a := range db {
+
+		if s_type != a.Type {
+			continue
+		}
+		if s_p != a.Path {
+			continue
+		}
+		arr = append(arr, a)
+	}
+
+	return arr
+}
+
+func GetDbInfo() map[string]string {
+
+	total := 0
+	for _, a := range db {
+		if !a.IsDir {
+			total++
+		}
+	}
+
+	return map[string]string{
+		"Total": strconv.Itoa(total),
+		"Root":  root_path,
+	}
+}
+
+func GetAsset(src string) string {
+	return downloadPath + strings.Replace(src, root_path, "", 1)
 }
