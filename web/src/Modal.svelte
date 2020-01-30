@@ -1,8 +1,13 @@
 <script>
+
 	export let FileName;
 	export let Type;
 	export let Component;
 	export let FilePath;
+
+	import { beforeUpdate } from 'svelte';
+	import { Post } from './lib/net.js';
+	import { Host, Path_Get } from './lib/const.js';
 	
 	function closeModal(){
 		const $this = this;
@@ -10,6 +15,20 @@
 			it.className = "modal";
 		});
 	}
+
+	let src = "";
+
+	beforeUpdate(async function(){
+		if(!FilePath) return;
+		
+		let res = await Post(Host + Path_Get,{
+			Src: FilePath,
+		})
+
+		src = res.Data;
+		console.log(src,Component);
+	})
+
 </script>
 
 <div>
@@ -21,8 +40,16 @@
 					{FileName}
 				</header>
 				<div class="card-content">
-					<Component {FilePath}/>
+					<Component Location={src}/>
 				</div>
+				<footer class="card-footer">
+					<button class="button is-success" href={src}>
+						下载
+					</button>
+					<button class="button is-warning">
+						删除
+					</button>
+				</footer>
 			</div>
 		</div>
 		<button class="modal-close is-large" aria-label="close" on:click={closeModal}></button>
