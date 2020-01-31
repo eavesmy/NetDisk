@@ -1,18 +1,17 @@
+import { navigate } from "svelte-routing";
+
 export function Post(url,data) {
 	return fetch(url,{
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
-			"x-access-token": "123"
+			"x-access-token": "eavesmy"
 		},
-		body: JSON.stringify(data)
-	}).then(res => res.json());
-}
-
-export function Get(url) {
-	return fetch(url,{
-		headers: {
-			"x-access-token": "123"
+		body: JSON.stringify(data),
+	}).then(res => {
+		if(res.status !== 200) {
+			navigate("/login",{replace:true});
 		}
-	}).then(res => res.json());
+		return res.json();
+	});
 }

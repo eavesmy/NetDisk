@@ -43,9 +43,9 @@
 					<Component Location={src}/>
 				</div>
 				<footer class="card-footer">
-					<button class="button is-success" href={src}>
+					<a class="button is-success" href={src}>
 						下载
-					</button>
+					</a>
 					<button class="button is-warning">
 						删除
 					</button>
