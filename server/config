@@ -1,4 +1,6 @@
 {
 	"location": "/data/downloads",
-	"download": "http://45.249.245.98:88"
+	"download": "http://45.249.245.98:88",
+	"id": "eavesmy",
+	"secret": "61140663dd8607d2e0ceda1e0ce70421"
 }

@@ -7,6 +7,6 @@ type Res struct {
 
 func NewRes() *Res {
 	return &Res{
-		Msg: "sucess",
+		Msg: "success",
 	}
 }

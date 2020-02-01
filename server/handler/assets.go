@@ -3,7 +3,6 @@ package handler
 import (
 	"../lib"
 	"../model"
-	"fmt"
 	"github.com/teambition/gear"
 )
 
@@ -19,7 +18,6 @@ func Assets(ctx *gear.Context) error { // 获取存储的资源
 }
 
 func Info(ctx *gear.Context) error {
-	fmt.Println("gogogo")
 	res := model.NewRes()
 	res.Data = lib.GetDbInfo()
 
@@ -35,4 +33,8 @@ func Get(ctx *gear.Context) error {
 	res.Data = lib.GetAsset(p.Src)
 
 	return ctx.JSON(200, res)
+}
+
+func Redirect(ctx *gear.Context) error {
+	return ctx.Redirect("http://localhost:5000")
 }

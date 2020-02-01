@@ -12,6 +12,8 @@
 		let res = await Post(Host + Path_Login,{
 			'pwd': crypted
 		});
+
+		console.log(res);
 		
 		if(res.Msg === "success") {
 			navigate("/",{replace: true});

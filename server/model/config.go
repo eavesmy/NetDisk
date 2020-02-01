@@ -6,6 +6,8 @@ type Config struct {
 	Mysql    string `json:"mysql"`
 	DB       string `json:"db"`
 	Download string `json:"download"`
+	Id       string `json:"id"`
+	Secret   string `json:"secret"`
 }
 
 func NewConfig() *Config {

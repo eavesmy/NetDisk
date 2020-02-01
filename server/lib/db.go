@@ -14,8 +14,13 @@ import (
 var downloadPath string
 var db = []model.Assets{}
 var root_path string
+var total_size int64
+
+var Config *model.Config
 
 func DbInit(c *model.Config) {
+
+	Config = c
 
 	locationInit(c.DB, c.Location)
 	root_path = c.Location
@@ -64,6 +69,8 @@ func initFile(f os.FileInfo, path string) {
 		IsDir:      f.IsDir(),
 		Path:       path,
 	}
+
+	total_size += f.Size()
 
 	db = append(db, *asset)
 }
@@ -136,6 +143,7 @@ func GetDbInfo() map[string]string {
 	return map[string]string{
 		"Total": strconv.Itoa(total),
 		"Root":  root_path,
+		"Size":  strconv.FormatInt(total_size, 10),
 	}
 }
 
