@@ -3,6 +3,7 @@
 	import md5 from 'md5';
 	import { Host,Path_Login, _ } from './lib/const.js';
 	import { Post } from './lib/net.js';
+	import { navigate } from "svelte-routing";
 	
 	let pwd = "";
 	let crypted = "";
@@ -13,7 +14,7 @@
 		});
 		
 		if(res.Msg === "success") {
-			
+			navigate("/",{replace: true});
 		}
 	}
 	

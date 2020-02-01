@@ -6648,7 +6648,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (168:6) {#each _data as item}
+    // (166:6) {#each _data as item}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
@@ -6715,28 +6715,28 @@ var app = (function () {
     			td5 = element("td");
     			t13 = text(t13_value);
     			t14 = space();
-    			add_location(td0, file$3, 169, 8, 3595);
+    			add_location(td0, file$3, 167, 8, 3550);
     			attr_dev(span, "class", span_class_value = !/*item*/ ctx[12].IsDir ? "button is-info is-small" : "");
-    			add_location(span, file$3, 171, 9, 3628);
-    			add_location(td1, file$3, 170, 8, 3613);
+    			add_location(span, file$3, 169, 9, 3583);
+    			add_location(td1, file$3, 168, 8, 3568);
     			attr_dev(a, "href", "javascript:void(0)");
     			attr_dev(a, "data-filename", a_data_filename_value = /*item*/ ctx[12].FileName);
     			attr_dev(a, "data-isdir", a_data_isdir_value = /*item*/ ctx[12].IsDir);
     			attr_dev(a, "data", a_data_value = JSON.stringify(/*item*/ ctx[12]));
-    			add_location(a, file$3, 176, 9, 3766);
-    			add_location(td2, file$3, 175, 11, 3752);
-    			add_location(td3, file$3, 178, 8, 3937);
+    			add_location(a, file$3, 174, 9, 3721);
+    			add_location(td2, file$3, 173, 11, 3707);
+    			add_location(td3, file$3, 176, 8, 3892);
     			attr_dev(button0, "class", "button is-default is-small");
-    			add_location(button0, file$3, 183, 10, 4031);
+    			add_location(button0, file$3, 181, 10, 3986);
     			attr_dev(button1, "class", "button is-default is-small");
-    			add_location(button1, file$3, 184, 10, 4097);
+    			add_location(button1, file$3, 182, 10, 4052);
     			attr_dev(button2, "class", "button is-default is-small");
-    			add_location(button2, file$3, 185, 10, 4162);
+    			add_location(button2, file$3, 183, 10, 4117);
     			attr_dev(div, "class", "control");
-    			add_location(div, file$3, 182, 9, 3999);
-    			add_location(td4, file$3, 181, 8, 3985);
-    			add_location(td5, file$3, 188, 8, 4256);
-    			add_location(tr, file$3, 168, 7, 3582);
+    			add_location(div, file$3, 180, 9, 3954);
+    			add_location(td4, file$3, 179, 8, 3940);
+    			add_location(td5, file$3, 186, 8, 4211);
+    			add_location(tr, file$3, 166, 7, 3537);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -6800,7 +6800,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(168:6) {#each _data as item}",
+    		source: "(166:6) {#each _data as item}",
     		ctx
     	});
 
@@ -6921,33 +6921,33 @@ var app = (function () {
     			t24 = space();
     			create_component(modal.$$.fragment);
     			attr_dev(p0, "class", "title");
-    			add_location(p0, file$3, 133, 3, 2947);
+    			add_location(p0, file$3, 131, 3, 2902);
     			attr_dev(header, "class", "card-header svelte-kadreq");
-    			add_location(header, file$3, 132, 2, 2915);
-    			add_location(span0, file$3, 138, 5, 3053);
-    			add_location(p1, file$3, 137, 4, 3044);
-    			add_location(span1, file$3, 143, 5, 3114);
-    			add_location(p2, file$3, 142, 4, 3105);
-    			add_location(p3, file$3, 152, 4, 3285);
+    			add_location(header, file$3, 130, 2, 2870);
+    			add_location(span0, file$3, 136, 5, 3008);
+    			add_location(p1, file$3, 135, 4, 2999);
+    			add_location(span1, file$3, 141, 5, 3069);
+    			add_location(p2, file$3, 140, 4, 3060);
+    			add_location(p3, file$3, 150, 4, 3240);
     			attr_dev(div0, "class", "field");
-    			add_location(div0, file$3, 136, 3, 3020);
-    			add_location(th0, file$3, 159, 6, 3417);
-    			add_location(th1, file$3, 160, 6, 3433);
-    			add_location(th2, file$3, 161, 6, 3451);
-    			add_location(th3, file$3, 162, 6, 3470);
-    			add_location(th4, file$3, 163, 6, 3488);
-    			add_location(th5, file$3, 164, 6, 3506);
-    			add_location(thead, file$3, 158, 5, 3403);
-    			add_location(tbody, file$3, 166, 5, 3539);
+    			add_location(div0, file$3, 134, 3, 2975);
+    			add_location(th0, file$3, 157, 6, 3372);
+    			add_location(th1, file$3, 158, 6, 3388);
+    			add_location(th2, file$3, 159, 6, 3406);
+    			add_location(th3, file$3, 160, 6, 3425);
+    			add_location(th4, file$3, 161, 6, 3443);
+    			add_location(th5, file$3, 162, 6, 3461);
+    			add_location(thead, file$3, 156, 5, 3358);
+    			add_location(tbody, file$3, 164, 5, 3494);
     			attr_dev(table, "class", "table is-fullwidth");
-    			add_location(table, file$3, 157, 4, 3363);
+    			add_location(table, file$3, 155, 4, 3318);
     			attr_dev(div1, "class", "field");
-    			add_location(div1, file$3, 156, 3, 3339);
+    			add_location(div1, file$3, 154, 3, 3294);
     			attr_dev(div2, "class", "card-content");
-    			add_location(div2, file$3, 135, 2, 2990);
+    			add_location(div2, file$3, 133, 2, 2945);
     			attr_dev(div3, "class", "card");
-    			add_location(div3, file$3, 131, 1, 2894);
-    			add_location(main, file$3, 130, 0, 2886);
+    			add_location(div3, file$3, 129, 1, 2849);
+    			add_location(main, file$3, 128, 0, 2841);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7588,26 +7588,26 @@ var app = (function () {
     			button.textContent = "登陆";
     			attr_dev(label, "class", "label");
     			attr_dev(label, "for", "");
-    			add_location(label, file$4, 29, 4, 433);
+    			add_location(label, file$4, 30, 4, 507);
     			attr_dev(input, "class", "input");
     			attr_dev(input, "type", "password");
-    			add_location(input, file$4, 33, 5, 514);
+    			add_location(input, file$4, 34, 5, 588);
     			attr_dev(div0, "class", "control");
-    			add_location(div0, file$4, 32, 4, 487);
+    			add_location(div0, file$4, 33, 4, 561);
     			attr_dev(div1, "class", "field");
-    			add_location(div1, file$4, 28, 3, 409);
+    			add_location(div1, file$4, 29, 3, 483);
     			attr_dev(button, "class", "button is-success");
-    			add_location(button, file$4, 38, 5, 663);
+    			add_location(button, file$4, 39, 5, 737);
     			attr_dev(div2, "class", "control");
-    			add_location(div2, file$4, 37, 4, 636);
+    			add_location(div2, file$4, 38, 4, 710);
     			attr_dev(div3, "class", "field");
-    			add_location(div3, file$4, 36, 3, 612);
+    			add_location(div3, file$4, 37, 3, 686);
     			attr_dev(div4, "class", "box");
-    			add_location(div4, file$4, 27, 2, 388);
+    			add_location(div4, file$4, 28, 2, 462);
     			attr_dev(div5, "id", "contain");
     			attr_dev(div5, "class", "svelte-dz79ml");
-    			add_location(div5, file$4, 26, 1, 367);
-    			add_location(main, file$4, 25, 0, 359);
+    			add_location(div5, file$4, 27, 1, 441);
+    			add_location(main, file$4, 26, 0, 433);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7664,7 +7664,9 @@ var app = (function () {
     	async function Login() {
     		let res = await Post(Host + Path_Login, { "pwd": crypted });
 
-    		if (res.Msg === "success") ;
+    		if (res.Msg === "success") {
+    			navigate("/", { replace: true });
+    		}
     	}
 
     	function Encode() {

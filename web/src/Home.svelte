@@ -1,8 +1,6 @@
 <script>
 	export let Title;
 
-	import { navigate } from "svelte-routing";
-
 	import { onMount } from 'svelte';
 	import moment from 'moment';
 
